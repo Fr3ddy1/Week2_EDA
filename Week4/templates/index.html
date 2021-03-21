@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Week 4 assigment</title>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico" type="text/css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo" type="text/css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300" type="text/css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" type="text/css"/>-->
+  
+</head>
+
+<body>
+    <h1>Predictive model of a process University selection</h1> 
+    <h3>This model will predict whether candidates would get admitted to a prestigious university.</h3>
+    <h3>Please only enter integer numbers. The main inputs are,</h3>
+    
+    <ul>
+      <li>
+      <h3>gmat:</h3> grade at Graduate Management Admission Test.
+      </li>
+      <li>
+      <h3>gpa:</h3> grade Point Average.
+      </li>
+      <li>
+      <h3>work_experience:</h3> number of years of experience at work.
+    </li>
+    </ul>
+    
+    <h3>The result will be,</h3>
+  
+  <ul>
+    <li>
+      <h3>Admitted:</h3> represented by the value of '1'.
+    </li>
+    <li>
+      <h3>Rejected:</h3> represented by the value of '0'.
+    </li>
+  </ul>
+    
+<div class="login">
+  <h3>Student's information</h3>
+  
+  <form action="{{ url_for('predict') }}" method="POST">
+    <input type="text" name="gmat" placeholder="Gmat" required="required" />
+    <br />
+    <br />
+    <input type="text" name="gpa" placeholder="Gpa" required="required" />
+    <br />
+    <br />
+    <input type="text" name="work_experience" placeholder="Work experience" required="required" />
+    <br />
+    <br />
+    <button class="btn btn-primary btn-block btn-large" type="submit">Predict</button>
+  </form>
+  
+  <br />
+  <br />
+  
+  
+  {{ prediction_text}}
+  
+</div>
+
+
+
+</body>
+</html>
