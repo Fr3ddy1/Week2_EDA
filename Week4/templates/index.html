@@ -7,13 +7,39 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo" type="text/css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300" type="text/css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" type="text/css"/>-->
-  
+  <style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+div {text-align: center;}
+ul {
+text-align: left;
+width: 40%;
+position:relative;
+left: 30%;
+}
+body {
+  background-image: url('static/images/img.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
 </head>
 
 <body>
+  
     <h1>Predictive model of a process University selection</h1> 
-    <h3>This model will predict whether candidates would get admitted to a prestigious university.</h3>
-    <h3>Please only enter integer numbers. The main inputs are,</h3>
+    <h2>This model will predict whether candidates would get admitted to a prestigious university.</h2>
+    
+    
+    <div class="row">
+      
+  <div class="column">
+    <h2>The main inputs are,</h2>
     
     <ul>
       <li>
@@ -26,8 +52,10 @@
       <h3>work_experience:</h3> number of years of experience at work.
     </li>
     </ul>
+          
     
-    <h3>The result will be,</h3>
+    
+    <h2>The result will be,</h2>
   
   <ul>
     <li>
@@ -37,8 +65,21 @@
       <h3>Rejected:</h3> represented by the value of '0'.
     </li>
   </ul>
+  
+  </div>
+  
+  
+  <div class="column">
     
-<div class="login">
+    <div class="login">
+      
+      <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
   <h3>Student's information</h3>
   
   <form action="{{ url_for('predict') }}" method="POST">
@@ -55,12 +96,20 @@
   </form>
   
   <br />
-  <br />
   
   
   {{ prediction_text}}
   
 </div>
+    
+  </div>
+  
+  </div>
+    
+   
+    
+    
+
 
 
 
