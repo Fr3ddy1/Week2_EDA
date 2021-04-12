@@ -1,0 +1,18 @@
+#WRITE YAML FILE
+file_type: csv
+file_name: DATA
+inbound_delimiter: ","
+n_row: 42000000
+n_col: 11
+columns: 
+    - ID
+    - AGE
+    - CITY
+    - GENDER
+    - MARITAL STATUS
+    - SALARY
+    - OTHER INCOMES
+    - RENT
+    - FOOD
+    - EDUCATION
+    - DEFAULT
